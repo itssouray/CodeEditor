@@ -1,0 +1,58 @@
+
+.editor-container {
+    position: relative;
+    width: 50%;
+    height: 50vh;
+    margin: 0 auto;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  }
+  
+  .code-highlighter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+    padding:10px;
+    box-sizing: border-box;
+    white-space: pre-wrap;
+    word-break: break-word;
+    background-color: #2d2d2d;
+    border-radius: 5px;
+    z-index: 1;
+  }
+  
+  .code-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 200px;
+    margin: 0;
+    padding: 10px;
+    border: none;
+    font-size: 16px;
+    font-family: inherit;
+    background: none;
+    color: transparent;
+    caret-color: white;
+    line-height: 1.5;
+    box-sizing: border-box;
+    resize:inherit;
+    white-space: pre-wrap;
+    word-break: break-word;
+    z-index: 2;
+    outline: 0;
+    overflow: hidden;
+  }
+
+  
+  pre {
+    margin: 0px;
+    white-space: pre-wrap;
+    word-break: break-word;
+    line-height: 1.5;
+    text-align: start;
+    padding: 10px;
+  }
+  
