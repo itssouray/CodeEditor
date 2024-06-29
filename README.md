@@ -6,7 +6,7 @@ CodeEditor is a React component designed to highlight syntax for different progr
 
 - Syntax highlighting for various programming languages.
 - Built with React and Vite for fast development.
-- Deployed using GitHub Pages.
+- Deployed using Netlify.
 
 ## Installation
 
@@ -17,8 +17,11 @@ To get started with the CodeEditor component, you need to have Node.js installed
 ```bash
 git clone https://github.com/itssouray/CodeEditor.git
 cd CodeEditor
+```
+
 
 2. Install the dependencies:
 
 ```bash
 npm install
+```
