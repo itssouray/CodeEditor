@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Highlight, themes } from 'prism-react-renderer';
 import '../editor.css';
 
-const CodeEditor = ({language}) => {
+const CodeEditor = ({ language }) => {
   const [code, setCode] = useState(`
-  import React,{useState} from "react";
+  import React, { useState } from "react";
 
   const App = () => (
     <div>
@@ -21,13 +21,15 @@ const CodeEditor = ({language}) => {
     }
   };
 
-
+  useEffect(() => {
+    updateTextAreaHeight();
+  }, [code]);
 
   return (
-    <div className="editor-container">
+    <div className="editor-container w-full p-4 rounded-md ">
       <Highlight code={code} language={language} theme={themes.vsDark}>
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
-          <pre className={`code-highlighter ${className}`} style={style}>
+          <pre className={`code-highlighter ${className} `} style={style}>
             {tokens.map((line, i) => (
               <div {...getLineProps({ line, key: i })}>
                 {line.map((token, key) => (
@@ -39,11 +41,11 @@ const CodeEditor = ({language}) => {
         )}
       </Highlight>
       <textarea
-        className="code-input"
+        className="code-input "
         value={code}
         onChange={(e) => setCode(e.target.value)}
-        onInput={updateTextAreaHeight} 
-        placeholder='Type some code...'
+        onInput={updateTextAreaHeight}
+        placeholder="Type some code..."
       />
     </div>
   );

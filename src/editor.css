@@ -5,6 +5,7 @@
     height: 50vh;
     margin: 0 auto;
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+    /* border: 1px solid; */
   }
   
   .code-highlighter {
